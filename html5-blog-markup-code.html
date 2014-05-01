@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Blog" lang="en">
+<head>
+<title>How to properly markup your Blog Post with microdata</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="https://plus.google.com/+SotirisTsartsaris/about" rel="publisher" />
+<meta itemprop="name" content="Graph Blog v1.1 By Tsartsaris Sotirios">
+<meta itemprop="description" content="A Blog about HTML5, php, Neo4j, Cypher, Twitter Bootstrap, Schemantic Data and more...">
+<meta itemprop="image" content="http://www.tsartsaris.gr/img/html5.png">
+<link rel="shortcut icon" href="./img/gb.png" type="image/png">
+<link rel="icon" href="./img/gb.png" type="image/png">
+</head>
+
+
+<!--WebPage schemantic description start-->
+
+<body itemscope itemtype="http://schema.org/WebPage">
+<meta itemprop="primaryImageOfPage" content="http://www.tsartsaris.gr/img/html5.png">
+<meta itemprop="specialty" content="HTML5, Schemantic Data, Microdata, Rich Snippets">
+
+<!--WebPage main content description-->
+<section id="mainContentOfPage" itemprop="mainContentOfPage">
+<!--WebPage main content description, content follows from now on will be a part of the web page content-->
+
+<!--WebPage schemantic description end-->
+
+
+<!--BLogPosting schemantic description start-->
+
+	<section id="BlogPost" itemscope itemtype="http://schema.org/BlogPosting">
+
+			<!-- 
+				"name" is the title of the blog posting item. The reason I put a <title></title> 
+				is that this is the title the Google Search engine will show up in the rich snippets search
+				result. Check the last link on the page to see what I mean.
+				W3 markup validator throws an error for the title being here. Consider moving it 
+			 -->
+			<h1 itemprop="name">How to properly markup your Blog Post with microdata</h1>
+			
+			<!-- 
+				This is the BlogPosting image. It will show up in the Google+ share button if 
+ 				the height is at least 120px, and if the width is less than 100px, then the aspect ratio 
+ 				must be no greater than 3.0.
+			 -->
+			<img itemprop="image" width="300" src="http://www.tsartsaris.gr/img/html5.png" alt="HTML5 Schemantic markup">
+
+
+			
+			<!-- 
+			The description of the post is not mandatory and it can be hidden by putting it in a meta tag 
+			and add the description in the content value 
+			 -->
+			<br/>
+			Description: <h4><span itemprop="description">A blog post explaining schemantic microdata markup for Blogs and Blog Posts in the HTML5 era</span></h4>
+			
+			<div>
+			<!-- 
+			Not mandatory but some times it might help to show up in the search results as the author of the post,
+			anyways it depends on your popularity. 
+			 -->
+				By <a rel="author" target="_blank" href="https://plus.google.com/+SotirisTsartsaris/about">Tsartsaris Sotirios</a> - <meta itemprop="datePublished" content="2014-04-27T20:00">April 27, 2014
+			</div>
+			<h3>Blog Post Body:</h3>
+			<!-- Property "articleBody" is Mandatory for the BlogPosting item -->
+			<p>
+				<span itemprop="articleBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt mauris turpis, id cursus quam sagittis ut. Curabitur pharetra pulvinar lorem, nec aliquet arcu rhoncus vel. Praesent et arcu congue odio porttitor pulvinar. Ut sit amet vehicula sapien. Vestibulum molestie ornare volutpat. Proin sem felis, ornare ac urna consequat, fermentum consequat lectus. Fusce pharetra lectus at laoreet auctor. Pellentesque molestie interdum enim, eu eleifend ligula dignissim sed.
+				</span>
+			</p>
+			<meta itemprop="wordCount" content="67"> <!-- The word count of the main blog post body -->
+			<meta itemprop="inLanguage" content="en-US"> <!-- The language this blog post is written -->
+			<meta itemprop="isFamilyFriendly" content="true"> <!-- Self explanatory|value is boolean -->
+			<meta itemprop="version" content="1.0"> <!-- version of the document, usefull for revisions, edits etc-->
+			<meta itemprop="sameAs" content="http://schema.org/BlogPosting"> <!-- A url with similar info -->
+			<meta itemprop="audience" content="https://www.linkedin.com/groups?home=&amp;gid=4192947">
+			<!-- Not sure if audience works but hey, let's put here my favorite LinkedIn group -->
+
+
+			<p>
+				<span  itemprop="interactionCount" content="20 UserLikes">likes:20</span> | 
+				<!-- Also comments count here, downloads etc-->
+				<span  itemprop="interactionCount" content="2 UserComments">comments:2</span>
+			</p>
+
+		<section id="comments">
+			<h3>Comments:</h3>
+			<hr>
+			<!--UserComment schemantic description start-->
+			<div itemprop="comment" itemscope itemtype="http://schema.org/UserComments">   
+			<!-- 
+			Property "discusses" describes the topic for which the comments are
+			 -->     
+				<meta itemprop="discusses" content="How to properly markup your Blog Post with microdata" />
+				Comment by: 
+				<span itemprop="creator">John</span>   
+				<time itemprop="commentTime" datetime="2014-04-27T20:30">April 27, 2014, 8:30pm</time>    
+				<p>
+				<span itemprop="commentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt mauris turpis, id cursus quam sagittis ut. Curabitur pharetra pulvinar lorem, nec aliquet arcu rhoncus vel. </span>
+				</p>
+				<!-- Usefull mostly if comments are serviced by another provider although not so sure
+				if of any use at all -->
+				<meta itemprop="replyToUrl" content="http://tsartsaris.gr/blog_markup.html">
+			</div>
+			<!--UserComment schemantic description end-->
+			<hr>
+			<!--UserComment schemantic description start-->
+			<div itemprop="comment" itemscope itemtype="http://schema.org/UserComments">
+			
+				<meta itemprop="discusses" content="How to properly markup your Blog Post with microdata" />
+				Comment by: 
+				<span itemprop="creator">Mike</span>   
+				<time itemprop="commentTime" datetime="2014-04-27T20:45">April 27, 2014, 8:45pm</time>    
+				<p>
+				<span itemprop="commentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt mauris turpis, id cursus quam sagittis ut. Curabitur pharetra pulvinar lorem, nec aliquet arcu rhoncus vel. </span>
+				</p>
+				<meta itemprop="replyToUrl" content="http://tsartsaris.gr/blog_markup.html">
+			</div>
+			<!--UserComment schemantic description end-->
+			<hr>
+		</section>
+
+		<!-- 
+		We all have tags with links to provide an easy way for users to find relevant content on our site
+		It's easy enough to add this litle property to define relevant keywords of our post content
+		 -->
+		<section id="tags">
+			<h3>Tags:</h3>
+			<p>
+				<a href="#"><span itemprop="keywords">HTML5</span></a>
+				<a href="#"><span itemprop="keywords">Microdata</span></a>
+			</p>
+		</section>
+		<hr>
+	</section>
+
+	<!--BLogPosting schemantic description ends here-->
+
+	<p>
+	<a href="http://www.google.com/webmasters/tools/richsnippets?q=http%3A%2F%2Ftsartsaris.gr%2Fblog_markup.html" target="_blank">Check Markup With Google</a>
+	<br/>
+	<a href="http://validator.w3.org/check?uri=http%3A%2F%2Ftsartsaris.gr%2Fblog_markup.html" target="_blank">W3 Validator</a>
+	</p>
+</section>
+</body>
+</html>
